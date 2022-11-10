@@ -58,7 +58,7 @@ while(!Raylib.WindowShouldClose()) {
     if (ballPos.X >= screenWidth - 18) {
         ballSpeedX = 0;
         ballSpeedY = 0;
-        Raylib.DrawText("You win!", screenWidth/2-165, screenHeight/2, 60, Color.GREEN);
+        Raylib.DrawText("You win!", screenWidth/2-114, screenHeight/2, 60, Color.GREEN);
     }
 
     if (Raylib.IsKeyDown(KeyboardKey.KEY_W)) {
@@ -69,11 +69,11 @@ while(!Raylib.WindowShouldClose()) {
         rectPos.Y+=1.5f;
     }
 
-    if (ballPos.Y > rect1Pos.Y) {
+    if (ballPos.Y - 75 > rect1Pos.Y) {
         rect1Pos.Y+=1.5f;
     }
 
-    if (ballPos.Y < rect1Pos.Y) {
+    if (ballPos.Y - 75 < rect1Pos.Y) {
         rect1Pos.Y-=1.5f;
     }
 
